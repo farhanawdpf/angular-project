@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class UserService {
 
-  private baseUrl = 'http://localhost/php-mysql-angular-crud/backend/php-mysql-crud-api';
+  private baseUrl = 'http://localhost/angular-project/backend/php-mysql-crud-api';
 
   constructor(private http: HttpClient) { }
 
@@ -29,7 +29,6 @@ export class UserService {
     { params: { id: id } },
     );
   }
-
   getUsersList(): Observable<any> {
     return this.http.get(`${this.baseUrl}/read.php`);
   }
